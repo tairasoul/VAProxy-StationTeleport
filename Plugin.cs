@@ -11,7 +11,7 @@ using Devdog.General.UI;
 
 namespace StationTeleport
 {
-    [BepInPlugin("vaproxy.station.teleport", "StationTeleport", "1.0.0")]
+    [BepInPlugin("vaproxy.station.teleport", "StationTeleport", "1.0.1")]
     public class Plugin: BaseUnityPlugin
     {
         public static ManualLogSource Log;
@@ -127,11 +127,8 @@ namespace StationTeleport
                     GameObject Content = Viewport.AddObject("Content");
                     RectTransform contentTransform = Content.AddComponent<RectTransform>();
                     contentTransform.anchoredPosition = new Vector2(-11.8327f, 0.0009f);
-                    contentTransform.sizeDelta = new Vector2(300, 575);
+                    contentTransform.sizeDelta = new Vector2(900, 600);
                     scroll.content = contentTransform;
-                    ContentSizeFitter SizeFitter = Content.AddComponent<ContentSizeFitter>();
-                    SizeFitter.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
-                    SizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
                     GridLayoutGroup group = Content.AddComponent<GridLayoutGroup>();
                     group.childAlignment = TextAnchor.UpperLeft;
                     group.spacing = new Vector2(80, 20);
