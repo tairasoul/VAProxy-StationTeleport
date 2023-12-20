@@ -36,9 +36,16 @@ namespace StationTeleport
             }
         }
 
-        internal void OnDestroy()
-        {
+        internal void Start() => InitScene();
 
+        internal void OnDestroy() => InitScene();
+
+        bool init = false;
+
+        internal void InitScene()
+        {
+            if (init) return;
+            init = true;
             SceneManager.activeSceneChanged += SceneCallback;
         }
 
