@@ -11,7 +11,7 @@ using Devdog.General.UI;
 
 namespace StationTeleport
 {
-    [BepInPlugin("vaproxy.station.teleport", "StationTeleport", "1.0.1")]
+    [BepInPlugin("vaproxy.station.teleport", "StationTeleport", "1.0.2")]
     public class Plugin: BaseUnityPlugin
     {
         public static ManualLogSource Log;
